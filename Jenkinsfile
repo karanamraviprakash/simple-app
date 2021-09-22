@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven3'
+    environment{
+        PATH="/opt/maven/apache-maven-3.8.2/bin:$PATH"
     }
     options {
         buildDiscarder logRotator(daysToKeepStr: '5', numToKeepStr: '7')
